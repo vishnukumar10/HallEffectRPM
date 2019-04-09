@@ -9,3 +9,6 @@ Requirements:
 
 Detailed Explanation at:
 https://youtu.be/9_FRK3s-XQQ
+
+Changes:
+The velocity specified in the above code can be changed according to your convenience, but the RPM will remain the same.
