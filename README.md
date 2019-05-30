@@ -27,9 +27,11 @@ Make the required connections. Every time the magnetic sensor comes near the sen
 The board which is connected to the Wi-Fi with the help of the User name and AIO key sends the data to the specific feed that is mentioned in the code. That is, it publishes the data onto the dashboard and the feed. 
 This data can be viewed real time on the dashboard and the feed. 
 
-[Pin 1][starting from "-" written near the pins] The GND connects to the GND on the board.  
+Pins in HallEffect Sensor:
 
-[Pin 2] The Source pin (S) connects to the Voltage supply in the board. (5V or 3.3V)
+[Pin 1][starting from "-" written near the pins] The Minus(-) connects to the GND on the board.  
+
+[Pin 2] The Source pin (S) in HallEffect Sensor is connected to the Voltage supply in the board. 5V in Arduino and Vin in ESP8266.
 
 [Pin 3] And the V.out is connected to the D2(for Arduino), D3(For ESP8266) on board. 
 
