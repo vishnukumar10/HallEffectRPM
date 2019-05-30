@@ -1,3 +1,8 @@
+// Use D3 Pin in ESP8266
+// D3 to S Pin (Hall Effect Sensor)
+// Vin to Center Pin
+// Ground(GND) to  Minus(-) Pin
+
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
@@ -9,6 +14,7 @@ unsigned int v =0;
 
 unsigned long passedtime;
 
+//Enter your WiFi Details Below:
 
 #define WLAN_SSID       "****"
 #define WLAN_PASS       "****"
@@ -19,7 +25,9 @@ unsigned long passedtime;
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
 #define AIO_USERNAME    "****"
 #define AIO_KEY         "****"
+
 WiFiClient client;
+
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
 
 Adafruit_MQTT_Publish Rpm = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/rpm");
@@ -105,7 +113,7 @@ void setup()
 
    Serial.println(rpm);
      Serial.print("Velocity=");
-//
+
   Serial.println(v); //Print out result to monitor
     if (! Rpm.publish(rpm)) {
     Serial.println(F("Failed"));
