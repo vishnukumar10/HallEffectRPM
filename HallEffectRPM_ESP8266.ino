@@ -41,7 +41,6 @@ Adafruit_MQTT_Publish Velocity = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/fee
 void MQTT_connect();
 
 void isr()
-
  {
 
    //Each rotation, this interrupt function is run twice, so take that into consideration for
